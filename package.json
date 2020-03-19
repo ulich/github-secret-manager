@@ -1,0 +1,29 @@
+{
+  "name": "github-secret-manager",
+  "version": "1.0.0",
+  "description": "Simplifies managing your GitHub secrets for GitHub Actions",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulich/github-secret-manager.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "workflow",
+    "secret"
+  ],
+  "author": "ulich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ulich/github-secret-manager/issues"
+  },
+  "homepage": "https://github.com/ulich/github-secret-manager#readme",
+  "dependencies": {
+    "@octokit/rest": "^17.1.0",
+    "tweetsodium": "0.0.4"
+  }
+}
