@@ -1,0 +1,26 @@
+name: master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  spread:
+    name: spread secrets
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+
+      - name: install
+        run: npm i
+
+      - name: spread
+        run: npm start
+        env:
+          GITHUB_PERSONAL_ACCESS_TOKEN: ${{ secrets.MY_ACCESS_TOKEN }}
+          TARGET_GITHUB_ORG: my-example-org
+          SECRETS_TO_SPREAD: EXAMPLE_SECRET,EXAMPLE_SECRET_2
+          EXAMPLE_SECRET: ${{ secrets.EXAMPLE_SECRET }}
+          EXAMPLE_SECRET_2: ${{ secrets.EXAMPLE_SECRET_2 }}
