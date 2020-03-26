@@ -1,10 +1,10 @@
 # github-secret-manager
 
-Simplifies managing your GitHub secrets for GitHub Actions. You can specify secrets in one central repository and it will spread the secrets to all other repositories of that github organization.
+Simplifies managing your GitHub secrets for GitHub Actions. You can specify secrets in one central repository and it will spread the secrets to all other repositories of that GitHub organization.
 
 ## Usage
 
-Fork this repository, create a github workflow by copying the example
+Fork this repository, create a GitHub workflow by copying the example
 
     cd .github/workflows
     cp master.yml.example master.yml
