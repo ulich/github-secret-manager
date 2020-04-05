@@ -4,6 +4,10 @@ Simplifies managing your GitHub secrets for GitHub Actions. You can specify secr
 
 ## Usage
 
+Whenever you create a new repository, trigger a build on this repository to spread the secrets. Currently there is no way to manually trigger a build with GitHub actions, but there is this [workaround](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e): Star the repository and unstar it again. This should trigger the build.
+
+## Setting it up
+
 Fork this repository, create a GitHub workflow by copying the example
 
     cd .github/workflows
