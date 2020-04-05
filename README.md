@@ -4,11 +4,13 @@ Simplifies managing your GitHub secrets for GitHub Actions. You can specify secr
 
 ## Usage
 
-Whenever you create a new repository, trigger a build on this repository to spread the secrets. Currently there is no way to manually trigger a build with GitHub actions, but there is this [workaround](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e): Star the repository and unstar it again. This should trigger the build.
+Whenever you create a new repository, trigger a build on this repository to spread the secrets by star'ing and un-star'ing this repository. Currently there is no better way to manually trigger a build with GitHub actions, see [workaround](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e).
 
 ## Setting it up
 
-Fork this repository, create a GitHub workflow by copying the example
+[Duplicate](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository) this repository (you can also fork it but this would require you to set your fork as public which might not be desired for such a sensitive topic).
+
+Then create a GitHub workflow by copying the example
 
     cd .github/workflows
     cp master.yml.example master.yml
@@ -22,3 +24,11 @@ and configure the environment variables to your needs.
 * **TARGET_REPOSITORIES_WHITELIST**: A comma separated list of repository names of the GitHub organization where secrets should be spread to
 * **TARGET_REPOSITORIES_BLACKLIST**: A comma separated list of repository names of the GitHub organization where secrets should NOT be spread to
 * **SECRETS_TO_SPREAD**: A comma separated list of secret names that should be spread. For every secret name in this list, configure a secret in this repository and create an environment variable with the same name
+
+
+## Pulling new features from this repository
+
+As usual with forks, just pull the latest changes from https://github.com/ulich/github-secret-manager `master` branch. If you duplicated the repository instead of forking, you can run
+
+    git remote add upstream https://github.com/ulich/github-secret-manager.git
+    git pull upsteam master
