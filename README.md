@@ -2,6 +2,8 @@
 
 Simplifies managing your GitHub secrets for GitHub Actions. You can specify secrets in one central repository and it will spread the secrets to all other repositories of that GitHub organization.
 
+*Note*: In the meantime, GitHub implemented organization-wide secrets making this project obsolete as of now. There are some ideas like rotating secrets that would still be nice to have, that's why I am keeping the project.
+
 ## Usage
 
 Whenever you create a new repository, trigger a build on this repository to spread the secrets by star'ing and un-star'ing this repository. Currently there is no better way to manually trigger a build with GitHub actions, see [workaround](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e).
