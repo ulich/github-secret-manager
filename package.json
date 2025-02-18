@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ulich/github-secret-manager#readme",
   "dependencies": {
-    "@octokit/rest": "^17.1.0",
+    "@octokit/rest": "^19.0.13",
     "tweetsodium": "0.0.4"
   }
 }
